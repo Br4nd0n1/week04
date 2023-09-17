@@ -32,6 +32,16 @@ export default function displayLieutenants( { personData } )
           <p className="form-control">Home: {personData.home}</p>
           <p className="form-control">Rank: {personData.rank}</p>
           <p className="form-control">Commanding Officer: {personData.commander}</p>
+          <ol className="list-group list-group-horizontal ms-2">
+            {personData.tours && personData.tours.map(
+                ({id, tour}) => (
+                  <li key={id} className={`list-group-item ${id % 2 ? "list-group-item-info": "list-group-item-secondary" }`}>
+                    {tour}
+                  </li>
+                )
+              )
+            }
+          </ol>
         </div>
       </article>
     </Layout>

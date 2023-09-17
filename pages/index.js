@@ -19,7 +19,7 @@ export default function Home( { britishGenerals, americanGenerals } ) {
       <h1>List of Generals And Lieutenants</h1>
       <h2>American Generals</h2>
       <div className="list-group">
-        {americanGenerals.map(
+        {americanGenerals && americanGenerals.map(
             ({id, name}) => (
               <Link key={id} href={`/${id}`} className="list-group-item list-group-item-action list-group-item-primary">
                 {name}
@@ -30,7 +30,7 @@ export default function Home( { britishGenerals, americanGenerals } ) {
       </div>
       <h2>British Generals</h2>
       <div className="list-group">
-        {britishGenerals.map(
+        {britishGenerals && britishGenerals.map(
             ({id, name}) => (
               <Link key={id} href={`/${id}`} className="list-group-item list-group-item-action list-group-item-info">
                 {name}
