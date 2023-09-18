@@ -23,7 +23,7 @@ export default function Layout( { children, home } )
         )
       }
       <footer>
-        <p class="mt-2">This Is Week Fours Assignment</p>
+        <p className="mt-2">This Is Week Fours Assignment</p>
       </footer>
     </div>
   );
